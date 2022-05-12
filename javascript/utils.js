@@ -24,3 +24,14 @@ nav_links.forEach(link => {
         link.lastElementChild.classList.toggle('active')
     })
 })
+
+
+
+// navbar color and position on scroll
+
+const navBar = document.querySelector('.nav')
+const navHeight = navBar.clientHeight
+console.log(navHeight);
+window.addEventListener('scroll', ()=>{
+    window.pageYOffset > navHeight ? navBar.classList.add('active'): navBar.classList.remove('active');
+})
